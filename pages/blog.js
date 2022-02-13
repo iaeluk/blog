@@ -41,7 +41,7 @@ export default function Blog({meusPosts}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const posts =  await fetch(`https://blog-iaeluk.vercel.app/api/posts`)
   .then(res => {
     if (res.ok) {
